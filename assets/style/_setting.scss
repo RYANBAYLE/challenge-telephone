@@ -1,0 +1,96 @@
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../assets/font/Rubik-Regular.ttf);
+}
+
+// Pour le gradient 
+$LightMagenta: hsl(293, 100%, 63%);
+$LightViolet: hsl(264, 100%, 61%);
+$gradient: linear-gradient( 220deg, hsl(293, 100%, 63%) -60%, hsl(264, 100%, 61%)100%);
+$gradient2: linear-gradient( 220deg, hsl(293, 100%, 63%) 0%, hsl(264, 100%, 61%)100%);
+$gradient3: linear-gradient( 220deg, hsl(264, 100%, 61%) 0, hsl(293, 100%, 63%)100%);
+
+// TEXT 
+$paleViolet: hsla(276, 100%, 81%, 0.1); 
+// (sub-heading at the top of the app UI)
+$ModerateViolet: hsl(276, 55%, 52%);
+// (chat on the left)
+$DesaturatedDarkViolet: hsl(271, 15%, 43%);
+// (chat on the right)
+$GrayishBlue: hsl(206, 6%, 79%);
+// (placeholder text)
+$VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+// (main heading)
+$DarkGrayishViolet: hsl(270, 7%, 64%);
+// (paragraph)
+
+// SECONDARY
+$White: hsl(0, 0%, 100%);
+$LightGrayishViolet: hsl(270, 20%, 96%);
+// (app background)
+$VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+// (submit button background)
+$VeryLightMagenta: hsl(289, 100%, 72%);
+// (radio button outline)
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Rubik", serif;
+    background: $White;
+    font-size: 16px;
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: 750px) {
+        overflow: scroll;
+    }
+
+    .gradient-left{
+        position: absolute;
+        top: 0;
+        left: -100px;
+        z-index: -1;
+
+        height: 90vh;
+        width: 500px;
+        background: $gradient;
+        border-radius: 0 0 360px 360px;
+    }
+    .gradient-right{
+        position: absolute;
+        bottom: 0;
+        right: -250px;
+        z-index: -1;
+
+        height: 85vh;
+        width: 500px;
+        background: $paleViolet;
+        border-radius: 270px 270px 0 0;
+
+    
+        @media screen and (max-width: 750px) {
+            display:none
+        }
+    }
+
+    .attribution {
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        bottom: 10px;
+        a {
+            color: hsl(228, 45%, 44%);
+          }
+      }
+       
+
+}

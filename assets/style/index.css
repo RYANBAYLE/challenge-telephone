@@ -1,0 +1,328 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css";
+@font-face {
+  font-family: "Rubik";
+  src: url(../assets/font/Rubik-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", serif;
+  background: hsl(0, 0%, 100%);
+  font-size: 16px;
+  max-width: 1440px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 750px) {
+  body {
+    overflow: scroll;
+  }
+}
+body .gradient-left {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  z-index: -1;
+  height: 90vh;
+  width: 500px;
+  background: linear-gradient(220deg, hsl(293, 100%, 63%) -60%, hsl(264, 100%, 61%) 100%);
+  border-radius: 0 0 360px 360px;
+}
+body .gradient-right {
+  position: absolute;
+  bottom: 0;
+  right: -250px;
+  z-index: -1;
+  height: 85vh;
+  width: 500px;
+  background: hsla(276, 100%, 81%, 0.1);
+  border-radius: 270px 270px 0 0;
+}
+@media screen and (max-width: 750px) {
+  body .gradient-right {
+    display: none;
+  }
+}
+body .attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 10px;
+}
+body .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  width: 73%;
+  gap: 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 750px) {
+  main {
+    grid-template-columns: 1fr;
+    margin: 20% 0;
+  }
+}
+main .part-left {
+  height: 470px;
+  width: 230px;
+  border-radius: 25px;
+  background: hsl(0, 0%, 100%);
+  -webkit-box-shadow: 7px 9px 20px 1px rgba(0, 0, 0, 0.0901960784);
+          box-shadow: 7px 9px 20px 1px rgba(0, 0, 0, 0.0901960784);
+  position: relative;
+}
+main .part-left:before {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  background: hsl(0, 0%, 100%);
+  border-radius: 0 0 10px 10px;
+  height: 20px;
+  width: 110px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+main .part-left .grid-container {
+  display: grid;
+  grid-template-rows: 65px 90%;
+  padding: 10px 10px 0 10px;
+}
+main .part-left .grid-container .header-phone {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  background: linear-gradient(220deg, hsl(293, 100%, 63%) 0%, hsl(264, 100%, 61%) 100%);
+  border-radius: 25px 25px 5px 5px;
+  padding: 30px 5px 15px 15px;
+}
+main .part-left .grid-container .header-phone #chevron {
+  position: absolute;
+  top: 32px;
+  left: 20px;
+  scale: 0.5;
+  color: hsl(0, 0%, 100%);
+}
+main .part-left .grid-container .header-phone #ellipsis {
+  position: absolute;
+  right: 15px;
+  scale: 0.5;
+  color: hsla(0, 0%, 100%, 0.684);
+}
+main .part-left .grid-container .header-phone .pp img {
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  margin-left: 15px;
+}
+main .part-left .grid-container .header-phone .Samuel h4 {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.7rem;
+  font-weight: 100;
+  padding-left: 15px;
+}
+main .part-left .grid-container .header-phone .Samuel p {
+  font-size: 0.5rem;
+  color: hsla(0, 0%, 100%, 0.264);
+  padding-left: 15px;
+}
+main .part-left .grid-container .main-phone {
+  height: 384px;
+  background: hsl(270, 20%, 96%);
+  border-radius: 0 0 15px 15px;
+  position: relative;
+}
+main .part-left .grid-container .main-phone .msg-left1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  gap: 10px;
+}
+main .part-left .grid-container .main-phone .msg-left1 p {
+  font-size: 0.5rem;
+  background: hsla(276, 100%, 81%, 0.256);
+  width: 60%;
+  border-radius: 10px 10px 10px 5px;
+  padding: 5px;
+  color: hsl(276, 55%, 52%);
+  line-height: 12px;
+}
+main .part-left .grid-container .main-phone .msg-right {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  display: grid;
+  justify-items: end;
+  grid-template-columns: 40px 40px 40px;
+  gap: 2px;
+}
+main .part-left .grid-container .main-phone .msg-right img {
+  height: 35px;
+  border-radius: 10px;
+}
+main .part-left .grid-container .main-phone .msg-right2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+main .part-left .grid-container .main-phone .msg-right2 p {
+  font-size: 0.5rem;
+  background: hsl(0, 0%, 100%);
+  width: 60%;
+  border-radius: 10px 10px 5px 10px;
+  padding: 5px;
+  color: black;
+  position: absolute;
+}
+main .part-left .grid-container .main-phone .msg-right2 p:first-child {
+  top: 55px;
+  right: 10px;
+}
+main .part-left .grid-container .main-phone .msg-right2 p:nth-child(2) {
+  text-align: right;
+  width: 35%;
+  top: 90px;
+  right: 10px;
+}
+main .part-left .grid-container .main-phone .msg-left2 p {
+  font-size: 0.5rem;
+  background: hsla(276, 100%, 81%, 0.256);
+  width: 60%;
+  border-radius: 10px 10px 10px 5px;
+  padding: 5px;
+  color: hsl(276, 55%, 52%);
+  line-height: 12px;
+  position: absolute;
+  top: 220px;
+  left: 10px;
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk {
+  position: absolute;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 25px 100px 20%;
+  height: 30px;
+  background: linear-gradient(220deg, hsl(264, 100%, 61%) 0, hsl(293, 100%, 63%) 100%);
+  margin-left: 10px;
+  padding: 0 10px 0 5px;
+  border-radius: 10px 10px 10px 5px;
+  color: hsl(0, 0%, 100%);
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk:first-child {
+  top: 272px;
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk:nth-child(2) {
+  top: 307px;
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk i {
+  scale: 1;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk p {
+  font-size: 0.5rem;
+}
+main .part-left .grid-container .main-phone .msg-left3 .walk #p {
+  font-size: 0.8rem;
+}
+main .part-left .grid-container .main-phone .msg {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+main .part-left .grid-container .main-phone .msg input {
+  width: 195px;
+  border: none;
+  padding: 9px;
+  border-radius: 15px;
+  font-size: 0.5rem;
+  z-index: -1;
+}
+main .part-left .grid-container .main-phone .msg input::-webkit-input-placeholder {
+  color: hsl(206, 6%, 79%);
+}
+main .part-left .grid-container .main-phone .msg input::-moz-placeholder {
+  color: hsl(206, 6%, 79%);
+}
+main .part-left .grid-container .main-phone .msg input:-ms-input-placeholder {
+  color: hsl(206, 6%, 79%);
+}
+main .part-left .grid-container .main-phone .msg input::-ms-input-placeholder {
+  color: hsl(206, 6%, 79%);
+}
+main .part-left .grid-container .main-phone .msg input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+main .part-left .grid-container .main-phone .msg i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+main .part-right {
+  padding-left: 40px;
+}
+@media screen and (max-width: 750px) {
+  main .part-right {
+    text-align: center;
+  }
+}
+main .part-right h1 {
+  color: hsl(271, 36%, 24%);
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+main .part-right p {
+  color: hsl(270, 7%, 64%);
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 1.1rem;
+}/*# sourceMappingURL=index.css.map */
